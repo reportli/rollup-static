@@ -6,3 +6,4 @@ Just bootstrappin' it with spagetti.
 * git clone REPO_URL
 * npm install
 * grunt server
+* go to http://localhost:9000
