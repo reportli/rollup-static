@@ -1,0 +1,9 @@
+.form-horizontal{
+  max-width: 400px;
+  margin:0 auto;
+}
+
+#input-view{
+  padding-top: 20px;
+  max-width: 600px;
+}
