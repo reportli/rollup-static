@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Roller</a>
+      <a class="navbar-brand" href="#" id="home-link">Roller</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -23,7 +23,7 @@
 
       <ul class="nav navbar-nav navbar-right hidden" id="navbar-actions">
         <li><a href="#">Notifications</a></li>
-        <li><a href="#">Rollups</a></li>
+        <li><a href="#" id="show-rollup-view">Rollups</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://placehold.it/20/20" alt="profile image" class="img-circle"> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -45,13 +45,13 @@
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="inputEmail" placeholder="user@domain.com">
+          <input type="text" class="form-control" id="inputEmail" placeholder="user@domain.com" name="username">
         </div>
       </div>
       <div class="form-group">
         <label for="inputPassword" class="col-lg-2 control-label">Password</label>
         <div class="col-lg-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="hunter2">
+          <input type="password" class="form-control" id="inputPassword" placeholder="hunter2" name="password">
         </div>
       </div>
     </fieldset>
@@ -62,7 +62,7 @@
 
 <div class="container hidden" id="input-view">
 
-  <section id="today">
+<section id="today">
     <!-- step two -->
     <div id="starting-input" class="form-group">
       <label class="control-label" for="main-task-input">What are you working on?</label>
@@ -72,50 +72,245 @@
     <!-- step three -->
     <ul id="today-list" class="list-group hidden">
     </ul>
+
+    <aside id="feed" class="import-feed">
+      <h3 class="h6">Recent Feed Items</h3>
+      <h4 class="h6">JIRA</h4>
+      <ul id="feed-list-1" class="list-group">
+        <li class="list-group-item"><span>GRO-5252  ABI redesign v4</span>
+
+          <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </li>
+        <li class="list-group-item"><span>HUED-2674 How do we better reconcile the different versions of flexbox?</span>
+
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="list-group-item"><span>HUED-2471 DaVinci Colors</span>
+
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="list-group-item"><span>GRO-4099 Convert JS controls to cross consumer</span>
+
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+      </ul>
+      <h4 class="h6">Calendar</h4>
+      <ul id="feed-list-2" class="list-group">
+        <li class="list-group-item"><span>Daniel Hagman's Birthday</span>
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="list-group-item"><span>Team Lunch</span>
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="list-group-item"><span>UED UX Office Hours</span>
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="list-group-item"><span>Developer Forum</span>
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="list-group-item"><span>iOS Bootcamp</span>
+                  <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Ignore</a></li>
+              </ul>
+            </div>
+          </div></li>
+      </ul>
+      <h4 class="h6">Review Board</h4>
+      <ul id="feed-list-3" class="list-group">
+        <li class="list-group-item"><span>Personalize Invite form Validation</span></li>
+        <li class="list-group-item"><span>[A11y] HUED-2850 | Entity Card Issues</span></li>
+        <li class="list-group-item"><span>[ABI] v4 Redesign</span></li>
+        <li class="list-group-item"><span>My diff to save in case it's lost</span></li>
+        <li class="list-group-item"><span>[ConnectHub] Show pending invites when ref is email-wym</span></li>
+      </ul>
+    </aside>
   </section>
+
+
+
+
 
 </div>
 
  <!-- step four -->
-<div class="container hidden" id="rollup-view">
+ <div class="container hidden" id="rollup-view">
   <h2>Rollups</h2>
-  <section>
-    <h3>Started</h3>
-    <ul>
-      <li>
-        <p>Task asdasdsa</p>
-        <div class="btn-group" role="group" aria-label="Actions">
-          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span></button><!-- glyphicon glyphicon-star -->
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#" class="task-remove">Delete</a></li>
-            </ul>
+  <section class="rollup">
+    <div class="rollup-type rollup-started">
+      <h3>Started</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>I talked with Jason about how to do this project.</p>
+          <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span></button><!-- glyphicon glyphicon-star -->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Delete</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+        <li class="list-group-item">
+          <p>I ate an ice cream cone.</p>
+          <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span></button><!-- glyphicon glyphicon-star -->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <p>I walked through the valley of the shadow of death.</p>
+          <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span></button><!-- glyphicon glyphicon-star -->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="rollup-type">
+      <h3>Completed</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>I started working on the static mock version of the project.</p>
+          <div class="btn-group" role="group" aria-label="Actions">
+            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span></button><!-- glyphicon glyphicon-star -->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="task-remove">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
-  <section>
-    <h3>Completed</h3>
-    <ul>
-      <li>
-        <p>Task asdasdsa</p>
-        <div class="btn-group" role="group" aria-label="Actions">
-          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span></button><!-- glyphicon glyphicon-star -->
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#" class="task-remove">Delete</a></li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
+  <section class="rollup">
+    <div class="rollup-type history">
+      <h3>03/11 - 03/18/15</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>I talked with Jason about how to do this project.</p>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="label label-success" data-toggle="tooltip" data-placement="top" title="Crystal rolled up this item!">Rolled up!</span>
+        </li>
+        <li class="list-group-item">
+          <p>I started working on the static mock version of the project.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+    <section class="rollup">
+    <div class="rollup-type history">
+      <h3>03/04 - 03/10/15</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>I talked with Jason about how to do this project.</p>
+        </li>
+        <li class="list-group-item">
+          <p>I started working on the static mock version of the project.</p>
+          <span class="glyphicon glyphicon-star"></span>
+        </li>
+      </ul>
+    </div>
   </section>
 </div>
 
@@ -128,6 +323,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+  <script type="text/javascript">
+    Parse.initialize("AQ2JzJBrqkne4KsZ3o4XYdG7bHlGPD9rWkepienY", "UxWpy5cEskMQ8uiBm5nFLAe9mbxqwYgFg9b8fV5w");
+    console.log(Parse);
+  </script>
 <script src="js/constants.js"></script>
 <script src="js/bootstrap.hide.show.js"></script>
 <script src="js/main.js"></script>
